@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BaNime Shop</title>
+</head>
+
+<body>
+    <header>
+        <center>
+            <h1>Batik Anime Shop</h1>
+            <div class="logo">
+                <a href="http://127.0.0.1:5500/img/Logo/LogoShop.png"><img src="/img/Logo/LogoShop.png" width="160"
+                        height="160" alt="Logo Shop"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#produk">Produk</a></li>
+                    <li><a href="/Contact/Contact.html">Kontak</a></li>
+                    <li><a href="#komentar">Komentar</a></li>
+                </ul>
+            </nav>
+        </center>
+    </header>
+
+    <section id="home">
+        <h1><b>Selamat Datang di Batik Shop Kami!</b></h1>
+        <h3>Temukan koleksi fashion wibu terbaru kami.</h3>
+    </section>
+
+    <section id="produk">
+        <h2>Produk Kami</h2>
+        <div class="product" id="product1">
+            <h3>Batik Luffy</h3>
+            <img src="/img/Luffy.jpeg" width="150" height="150" alt="Batik Luffy">
+            <p>Harga: Rp 100.000</p>
+            <button onclick="addToCart('Batik Luffy')">Tambah ke Keranjang</button>
+        </div>
+        <div class="product" id="product2">
+            <h3>Batik Zoro</h3>
+            <img src="/img/Zoro.jpeg" width="150" height="150" alt="Batik Zoro">
+            <p>Harga: Rp 150.000</p>
+            <button onclick="addToCart('Batik Zoro')">Tambah ke Keranjang</button>
+        </div>
+        <div class="product" id="product2">
+            <h3>Batik Luffy White Edition</h3>
+            <img src="/img/Luffy White Edition.jpg" width="150" height="150" alt="Batik Luffy White Edition">
+            <p>Harga: Rp 155.000</p>
+            <button onclick="addToCart('Batik Luffy White Edition')">Tambah ke Keranjang</button>
+        </div>
+        <div class="product" id="product2">
+            <h3>Batik Naruto</h3>
+            <img src="/img/Batik Naruto.jpeg" width="150" height="150" alt="Batik Naruto">
+            <p>Harga: Rp 150.000</p>
+            <button onclick="addToCart('Batik Naruto')">Tambah ke Keranjang</button>
+        </div>
+        <div class="product" id="product2">
+            <h3>Batik AOT</h3>
+            <img src="/img/Batik AOT.jpeg" width="150" height="150" alt="Batik AOT">
+            <p>Harga: Rp 150.000</p>
+            <button onclick="addToCart('Batik AOT')">Tambah ke Keranjang</button>
+        </div>
+        <!-- Tambahkan produk lain di sini -->
+    </section>
+
+    <section id="kontak">
+        <h2>Kontak Kami</h2>
+        <p>Email: batikunik@gmail.com</p>
+        <p>OR WhatsApp--<a href="https://wa.me/085867337741"> <b>:085867337741</b></a></h3>
+        </p>
+    </section>
+
+    <!DOCTYPE html>
+    <html lang="id">
+
+    <head>
+        <meta charset```html <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Halaman Komentar</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+
+            .comment-section {
+                margin-top: 20px;
+            }
+
+            .comment {
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section id="komentar">
+            <h1>Kolom Komentar</h1>
+
+            <form id="commentForm">
+                <label for="name">Nama:</label><br>
+                <input type="text" id="name" required><br><br>
+                <label for="comment">Komentar:</label><br>
+                <textarea id="comment" required></textarea><br><br>
+                <input type="submit" value="Kirim Komentar">
+            </form>
+
+            <div class="comment-section" id="commentSection">
+                <h2>Daftar Komentar:</h2>
+            </div>
+        </section>
+        <script>
+            document.getElementById('commentForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const comment = document.getElementById('comment').value;
+
+                const commentSection = document.getElementById('commentSection');
+                const newComment = document.createElement('div');
+                newComment.classList.add('comment');
+                newComment.innerHTML = `<strong>${name}</strong><p>${comment}</p>`;
+                commentSection.appendChild(newComment);
+
+                // Clear the form
+                document.getElementById('commentForm').reset();
+            });
+        </script>
+
+    </body>
+
+    </html>
+
+    <footer>
+        <p>&copy; 2024 Batik Anime Shop</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
